@@ -71,12 +71,12 @@
   nav.links a.nav-link:hover{color:var(--brass);}
   .social{display:flex;gap:14px;align-items:center;}
   .social a{
-    width:34px;height:34px;border:1px solid var(--line);border-radius:50%;
+    width:42px;height:42px;border:1px solid var(--line);border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     transition:border-color .2s, background .2s;
   }
   .social a:hover{border-color:var(--brass);background:rgba(166,129,60,0.08);}
-  .social svg{width:16px;height:16px;fill:var(--walnut-dark);}
+  .social svg{width:24px;height:24px;fill:var(--walnut-dark);}
   .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;}
   .menu-btn span{display:block;width:24px;height:2px;background:var(--walnut-dark);margin:5px 0;}
 
@@ -93,7 +93,7 @@
     pointer-events:none;
   }
   .hero .eyebrow{
-    font-size:0.85rem;color:var(--brass);font-weight:600;margin-bottom:18px;
+    font-size:1.2rem;color:var(--brass);font-weight:600;margin-bottom:18px;
   }
   .hero h1{
     font-size:clamp(2.4rem, 5vw, 4rem);
@@ -121,7 +121,7 @@
   /* Section framing */
   section{padding:90px 0;}
   .section-head{margin-bottom:48px;max-width:560px;}
-  .section-head .kicker{color:var(--brass);font-weight:600;font-size:0.85rem;margin-bottom:10px;}
+  .section-head .kicker{color:var(--brass);font-weight:600;font-size:1.1rem;margin-bottom:10px;}
   .section-head h2{font-size:clamp(1.8rem,3vw,2.4rem);}
 
   /* About */
@@ -144,7 +144,7 @@
     margin-top:56px;
   }
   .service{background:var(--ivory);padding:30px 26px;}
-  .service h3{font-size:1.05rem;margin-bottom:8px;font-weight:500;}
+  .service h3{font-size:1.05rem;margin-bottom:8px;font-weight:700;}
   .service p{font-size:0.92rem;color:#5a4636;}
 
   /* Contact */
@@ -207,13 +207,55 @@
     .hero{padding:70px 20px 60px;}
     section{padding:64px 0;}
   }
+
+  /* Brand styling */
+  :root{
+    --ivory:#FFFFFF;
+    --purple:#5B2A86;
+    --purple:#5B2A86;
+    --brass:#B08D2F;
+    --line:rgba(91,42,134,0.18);
+  }
+  body, h1, h2, h3, .brand, .field input, .field textarea{
+    font-family:'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  }
+  body{background:#FFFFFF;color:#5B2A86;}
+  h1,h2,h3{color:#5B2A86;}
+  header{background:#FFFFFF;border-bottom:0;}
+  .brand{display:block;font-size:1rem;line-height:1;}
+  .brand img{display:block;width:155px;height:auto;}
+  nav.links a.nav-link{color:#5B2A86;}
+  nav.links a.nav-link:hover{color:#B08D2F;}
+  .social a{border:0;}
+  .social a:hover{background:rgba(176,141,47,0.12);}
+  .social svg{fill:#5B2A86;}
+  .menu-btn span{background:#5B2A86;}
+  .hero::before{display:none;}
+  .hero .eyebrow, .section-head .kicker{color:#B08D2F;}
+  .hero p, .about-copy p, .service p, footer{color:#5B2A86;}
+  .service h3{color:#B08D2F;}
+  .frame-photo{border:0;box-shadow:none;}
+  .services{gap:32px;background:#FFFFFF;border:0;}
+  .service{background:#FFFFFF;padding:30px 0;}
+  #about, #contact{border-top:0;background:#FFFFFF;color:#5B2A86;}
+  #contact .section-head h2{color:#5B2A86;}
+  .contact-info p, .contact-info a, .field label, .form-note{color:#5B2A86;}
+  .contact-info a{border-bottom-color:var(--line);}
+  .contact-info .social a{border-color:transparent;}
+  .contact-info .social svg{fill:#5B2A86;}
+  .field input, .field textarea{background:#FFFFFF;border:0;border-bottom:1px solid var(--line);color:#5B2A86;}
+  .field input:focus, .field textarea:focus{border-bottom-color:#B08D2F;}
+  form .btn{background:#B08D2F;border-color:#B08D2F;color:#FFFFFF;}
+  form .btn:hover{background:transparent;color:#B08D2F;}
+  #form-status{color:#B08D2F;}
+  @media (max-width:820px){nav.links{background:#FFFFFF;border-bottom:0;}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <a href="#hero" class="brand">Prints Charming<span>MILDURA &middot; SINCE 1997</span></a>
+    <a href="#hero" class="brand" aria-label="Prints Charming Mildura home"><img src="white background logo.jpg" alt="Prints Charming Mildura"></a>
     <nav class="links" id="navLinks">
       <a class="nav-link" href="#hero">Home</a>
       <a class="nav-link" href="#about">About</a>
@@ -233,8 +275,8 @@
 
 <section class="hero" id="hero">
   <div class="eyebrow">Custom Picture Framing in Mildura, Victoria</div>
-  <h1>We can frame anything.</h1>
-  <p>From footy jumpers to wedding bouquets, boxing gloves to war medals &mdash; we've been framing Mildura's treasured memories since 1997.</p>
+  <h1>We can frame anything!</h1>
+  <p>From footy jumpers to wedding bouquets, boxing gloves to war medals. We've been framing Mildura's treasured memories since 1997.</p>
   <div class="hero-actions">
     <a href="#contact" class="btn">Get a quote</a>
     <a href="#about" class="btn outline">Our story</a>
@@ -247,11 +289,11 @@
       <div class="about-copy">
         <div class="section-head">
           <div class="kicker">About Us</div>
-          <h2>25 years of custom framing</h2>
+          <h2>Almost 30 years of Custom Framing</h2>
         </div>
-        <p>Prints Charming has been providing outstanding custom framing for 25 years. It all started way back in 1997 with a little shop in a small arcade.</p>
-        <p>We can frame anything! From footy jumpers to wedding bouquets, boxing gloves to cricket bats, grandad's war medals &mdash; we've even framed a brick before.</p>
-        <p>Based in Mildura, Victoria, we invite you to pay us a visit, see our showroom and browse our wide range of artwork, mirrors and custom framing options.</p>
+        <p>Prints Charming has been providing outstanding custom framing since 1997. It all started way back with a little shop in a Langtree Arcade.</p>
+        <p>We can frame anything! From footy jumpers to wedding bouquets, boxing gloves to cricket bats, grandad's war medals, we've even framed a brick before.</p>
+        <p>Being a local Mildura family business, we invite you to pay us a visit, see our showroom and browse our wide range of artwork, mirrors and custom framing options.</p>
       </div>
       <div class="frame-photo">
         <img src="https://static.wixstatic.com/media/4189f3_244ff11c69a74bfc9bf65a283ad5f395~mv2.jpg" alt="Inside the Prints Charming showroom in Mildura">
